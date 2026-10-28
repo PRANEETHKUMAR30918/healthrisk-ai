@@ -1,0 +1,885 @@
+biomarkers:
+  # ── CBC ───────────────────────────────────────────────────────────────────
+  - canonical_name: "Hemoglobin"
+    default_unit: "g/dL"
+    plausible_min: 3.0
+    plausible_max: 25.0
+    aliases:
+      - "hb"
+      - "hgb"
+      - "haemoglobin"
+      - "hemoglobin"
+      - "blood hemoglobin"
+      - "hgb level"
+      - "hb test"
+      - "haemoglobin hb"
+
+  - canonical_name: "RBC"
+    default_unit: "10^6/uL"
+    plausible_min: 1.0
+    plausible_max: 10.0
+    aliases:
+      - "rbc"
+      - "red blood cell count"
+      - "red blood cells"
+      - "rbc count"
+      - "erythrocytes"
+      - "total rbc"
+      - "total rbc count"
+
+  - canonical_name: "WBC"
+    default_unit: "10^3/uL"
+    plausible_min: 0.5
+    plausible_max: 100.0
+    aliases:
+      - "wbc"
+      - "white blood cell count"
+      - "white blood cells"
+      - "wbc count"
+      - "leukocytes"
+      - "total wbc"
+      - "total wbc count"
+
+  - canonical_name: "Platelets"
+    default_unit: "10^3/uL"
+    plausible_min: 10.0
+    plausible_max: 1500.0
+    aliases:
+      - "platelets"
+      - "platelet count"
+      - "plt"
+      - "thrombocytes"
+
+  - canonical_name: "MCV"
+    default_unit: "fL"
+    plausible_min: 40.0
+    plausible_max: 150.0
+    aliases:
+      - "mcv"
+      - "mean corpuscular volume"
+
+  - canonical_name: "MCH"
+    default_unit: "pg"
+    plausible_min: 15.0
+    plausible_max: 50.0
+    aliases:
+      - "mch"
+      - "mean corpuscular hemoglobin"
+
+  - canonical_name: "MCHC"
+    default_unit: "g/dL"
+    plausible_min: 25.0
+    plausible_max: 40.0
+    aliases:
+      - "mchc"
+      - "mean corpuscular hemoglobin concentration"
+
+  - canonical_name: "Hematocrit"
+    default_unit: "%"
+    plausible_min: 10.0
+    plausible_max: 75.0
+    aliases:
+      - "hematocrit"
+      - "haematocrit"
+      - "hct"
+      - "pcv"
+      - "packed cell volume"
+      - "haematocrit pcv"
+
+  - canonical_name: "ESR"
+    default_unit: "mm/hr"
+    plausible_min: 0.0
+    plausible_max: 200.0
+    aliases:
+      - "esr"
+      - "erythrocyte sedimentation rate"
+      - "sed rate"
+      - "erythrocyte sed rate"
+
+  - canonical_name: "RDW"
+    default_unit: "%"
+    plausible_min: 5.0
+    plausible_max: 30.0
+    aliases:
+      - "rdw"
+      - "rdw-cv"
+      - "red cell distribution width"
+
+  # ── Liver Function ────────────────────────────────────────────────────────
+  - canonical_name: "ALT"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    aliases:
+      - "alt"
+      - "sgpt"
+      - "alanine aminotransferase"
+      - "alanine transaminase"
+      - "sgpt alt"
+      - "sgpt / alt"
+
+  - canonical_name: "AST"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    aliases:
+      - "ast"
+      - "sgot"
+      - "aspartate aminotransferase"
+      - "aspartate transaminase"
+      - "sgot ast"
+      - "sgot / ast"
+
+  - canonical_name: "Alkaline Phosphatase"
+    default_unit: "U/L"
+    plausible_min: 10.0
+    plausible_max: 3000.0
+    aliases:
+      - "alkaline phosphatase"
+      - "alp"
+      - "alk phos"
+      - "alkphos"
+
+  - canonical_name: "GGT"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 3000.0
+    aliases:
+      - "ggt"
+      - "gamma gt"
+      - "gamma glutamyl transferase"
+      - "gamma-glutamyltransferase"
+
+  - canonical_name: "Total Bilirubin"
+    default_unit: "mg/dL"
+    plausible_min: 0.0
+    plausible_max: 50.0
+    aliases:
+      - "total bilirubin"
+      - "bilirubin total"
+      - "t bilirubin"
+      - "tbil"
+
+  - canonical_name: "Direct Bilirubin"
+    default_unit: "mg/dL"
+    plausible_min: 0.0
+    plausible_max: 30.0
+    aliases:
+      - "direct bilirubin"
+      - "conjugated bilirubin"
+      - "dbil"
+      - "d bilirubin"
+
+  - canonical_name: "Albumin"
+    default_unit: "g/dL"
+    plausible_min: 1.0
+    plausible_max: 8.0
+    aliases:
+      - "albumin"
+      - "serum albumin"
+      - "alb"
+
+  - canonical_name: "Total Protein"
+    default_unit: "g/dL"
+    plausible_min: 3.0
+    plausible_max: 15.0
+    aliases:
+      - "total protein"
+      - "serum protein"
+      - "protein total"
+      - "t protein"
+
+  # ── Kidney Function ───────────────────────────────────────────────────────
+  - canonical_name: "Serum Creatinine"
+    default_unit: "mg/dL"
+    plausible_min: 0.1
+    plausible_max: 20.0
+    aliases:
+      - "serum creatinine"
+      - "creatinine"
+      - "creat"
+      - "s creatinine"
+      - "cr"
+
+  - canonical_name: "BUN"
+    default_unit: "mg/dL"
+    plausible_min: 2.0
+    plausible_max: 150.0
+    aliases:
+      - "bun"
+      - "blood urea nitrogen"
+      - "urea nitrogen"
+      - "blood urea"
+      - "serum urea"
+
+  - canonical_name: "eGFR"
+    default_unit: "mL/min/1.73m2"
+    plausible_min: 5.0
+    plausible_max: 180.0
+    aliases:
+      - "egfr"
+      - "estimated gfr"
+      - "glomerular filtration rate"
+      - "ckd-epi"
+      - "gfr ckd"
+
+  - canonical_name: "Uric Acid"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 20.0
+    aliases:
+      - "uric acid"
+      - "serum uric acid"
+      - "urate"
+      - "sua"
+
+  - canonical_name: "Sodium"
+    default_unit: "mEq/L"
+    plausible_min: 100.0
+    plausible_max: 175.0
+    aliases:
+      - "sodium"
+      - "serum sodium"
+      - "na"
+      - "na+"
+      - "serum na"
+
+  - canonical_name: "Potassium"
+    default_unit: "mEq/L"
+    plausible_min: 1.5
+    plausible_max: 10.0
+    aliases:
+      - "potassium"
+      - "serum potassium"
+      - "k"
+      - "k+"
+      - "serum k"
+
+  - canonical_name: "Calcium"
+    default_unit: "mg/dL"
+    plausible_min: 4.0
+    plausible_max: 18.0
+    aliases:
+      - "calcium"
+      - "serum calcium"
+      - "ca"
+      - "calcium total"
+      - "total calcium"
+
+  - canonical_name: "Phosphorus"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 15.0
+    aliases:
+      - "phosphorus"
+      - "phosphate"
+      - "serum phosphorus"
+      - "inorganic phosphate"
+
+  # ── Diabetes ──────────────────────────────────────────────────────────────
+  - canonical_name: "Fasting Blood Glucose"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 800.0
+    aliases:
+      - "fasting blood glucose"
+      - "fbg"
+      - "fpg"
+      - "fasting plasma glucose"
+      - "fasting blood sugar"
+      - "fbs"
+      - "blood glucose fasting"
+      - "glucose fasting"
+
+  - canonical_name: "HbA1c"
+    default_unit: "%"
+    plausible_min: 3.0
+    plausible_max: 20.0
+    aliases:
+      - "hba1c"
+      - "glycated hemoglobin"
+      - "glycosylated hemoglobin"
+      - "a1c"
+      - "hemoglobin a1c"
+      - "hb a1c"
+      - "glycohaemoglobin"
+
+  - canonical_name: "Postprandial Blood Glucose"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 800.0
+    aliases:
+      - "postprandial blood glucose"
+      - "ppbg"
+      - "ppbs"
+      - "blood sugar pp"
+      - "post prandial glucose"
+      - "post-prandial blood glucose"
+
+  - canonical_name: "Fasting Insulin"
+    default_unit: "uIU/mL"
+    plausible_min: 0.5
+    plausible_max: 200.0
+    aliases:
+      - "fasting insulin"
+      - "insulin fasting"
+      - "serum insulin"
+
+  - canonical_name: "HOMA-IR"
+    default_unit: ""
+    plausible_min: 0.0
+    plausible_max: 50.0
+    aliases:
+      - "homa-ir"
+      - "homa ir"
+      - "homair"
+      - "insulin resistance index"
+
+  # ── Lipids ────────────────────────────────────────────────────────────────
+  - canonical_name: "Total Cholesterol"
+    default_unit: "mg/dL"
+    plausible_min: 50.0
+    plausible_max: 700.0
+    aliases:
+      - "total cholesterol"
+      - "cholesterol total"
+      - "cholesterol"
+      - "tc"
+
+  - canonical_name: "HDL"
+    default_unit: "mg/dL"
+    plausible_min: 10.0
+    plausible_max: 150.0
+    aliases:
+      - "hdl"
+      - "hdl cholesterol"
+      - "high density lipoprotein"
+      - "hdl-c"
+
+  - canonical_name: "LDL"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 400.0
+    aliases:
+      - "ldl"
+      - "ldl cholesterol"
+      - "low density lipoprotein"
+      - "ldl-c"
+
+  - canonical_name: "Triglycerides"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 2000.0
+    aliases:
+      - "triglycerides"
+      - "tg"
+      - "trigs"
+      - "triglyceride"
+
+  - canonical_name: "VLDL"
+    default_unit: "mg/dL"
+    plausible_min: 2.0
+    plausible_max: 300.0
+    aliases:
+      - "vldl"
+      - "vldl cholesterol"
+      - "very low density lipoprotein"
+
+  # ── Thyroid ───────────────────────────────────────────────────────────────
+  - canonical_name: "TSH"
+    default_unit: "uIU/mL"
+    plausible_min: 0.01
+    plausible_max: 100.0
+    aliases:
+      - "tsh"
+      - "thyroid stimulating hormone"
+      - "thyrotropin"
+      - "thyroid-stimulating hormone"
+      - "tsh thyroid"
+      - "tsh (thyroid stimulating hormone)"
+
+  - canonical_name: "Free T3"
+    default_unit: "pg/mL"
+    plausible_min: 0.5
+    plausible_max: 20.0
+    aliases:
+      - "free t3"
+      - "ft3"
+      - "triiodothyronine"
+      - "t3 free"
+      - "free triiodothyronine"
+
+  - canonical_name: "Free T4"
+    default_unit: "ng/dL"
+    plausible_min: 0.1
+    plausible_max: 10.0
+    aliases:
+      - "free t4"
+      - "ft4"
+      - "thyroxine"
+      - "t4 free"
+      - "free thyroxine"
+
+  - canonical_name: "Anti-TPO"
+    default_unit: "IU/mL"
+    plausible_min: 0.0
+    plausible_max: 2000.0
+    aliases:
+      - "anti-tpo"
+      - "anti tpo"
+      - "tpo antibodies"
+      - "anti-tpo antibodies"
+      - "thyroid peroxidase antibodies"
+      - "antitpo"
+
+  # ── Vitamins & Minerals ───────────────────────────────────────────────────
+  - canonical_name: "Vitamin D"
+    default_unit: "ng/mL"
+    plausible_min: 1.0
+    plausible_max: 200.0
+    aliases:
+      - "vitamin d"
+      - "vit d"
+      - "25-oh vitamin d"
+      - "25-hydroxyvitamin d"
+      - "25 oh d"
+      - "vitamin d 25-oh"
+      - "vitamin d 25 oh"
+      - "vitamin d (25-oh)"
+      - "cholecalciferol"
+
+  - canonical_name: "Vitamin B12"
+    default_unit: "pg/mL"
+    plausible_min: 50.0
+    plausible_max: 5000.0
+    aliases:
+      - "vitamin b12"
+      - "vit b12"
+      - "b12"
+      - "cobalamin"
+      - "cyanocobalamin"
+
+  - canonical_name: "Ferritin"
+    default_unit: "ng/mL"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    aliases:
+      - "ferritin"
+      - "serum ferritin"
+
+  - canonical_name: "Serum Iron"
+    default_unit: "ug/dL"
+    plausible_min: 10.0
+    plausible_max: 300.0
+    aliases:
+      - "serum iron"
+      - "iron"
+      - "fe"
+      - "iron serum"
+
+  - canonical_name: "TIBC"
+    default_unit: "ug/dL"
+    plausible_min: 100.0
+    plausible_max: 600.0
+    aliases:
+      - "tibc"
+      - "total iron binding capacity"
+      - "iron binding capacity"
+
+  - canonical_name: "Transferrin Saturation"
+    default_unit: "%"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    aliases:
+      - "transferrin saturation"
+      - "tsat"
+      - "iron saturation"
+      - "percent saturation"
+
+  - canonical_name: "Magnesium"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 6.0
+    aliases:
+      - "magnesium"
+      - "serum magnesium"
+      - "mg"
+      - "mg2+"
+      - "magnesium level"
+
+  # ── Liver Function ────────────────────────────────────────────────────────
+  - canonical_name: "ALT"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    aliases:
+      - "alt"
+      - "sgpt"
+      - "alanine aminotransferase"
+      - "alanine transaminase"
+      - "sgpt alt"
+      - "sgpt / alt"
+      - "alt/sgpt"
+
+  - canonical_name: "AST"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    aliases:
+      - "ast"
+      - "sgot"
+      - "aspartate aminotransferase"
+      - "aspartate transaminase"
+      - "sgot ast"
+      - "sgot / ast"
+      - "ast/sgot"
+
+  - canonical_name: "GGT"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 3000.0
+    aliases:
+      - "ggt"
+      - "gamma gt"
+      - "gamma glutamyl transferase"
+      - "gamma-glutamyltransferase"
+      - "ggt level"
+
+  - canonical_name: "Albumin"
+    default_unit: "g/dL"
+    plausible_min: 1.0
+    plausible_max: 8.0
+    aliases:
+      - "albumin"
+      - "serum albumin"
+      - "alb"
+      - "albumin level"
+
+  - canonical_name: "Total Bilirubin"
+    default_unit: "mg/dL"
+    plausible_min: 0.0
+    plausible_max: 50.0
+    aliases:
+      - "total bilirubin"
+      - "bilirubin total"
+      - "t bilirubin"
+      - "tbil"
+      - "bilirubin (total)"
+
+  - canonical_name: "Alkaline Phosphatase"
+    default_unit: "U/L"
+    plausible_min: 10.0
+    plausible_max: 3000.0
+    aliases:
+      - "alkaline phosphatase"
+      - "alp"
+      - "alk phos"
+      - "alkphos"
+      - "alk. phosphatase"
+
+  # ── Thyroid ───────────────────────────────────────────────────────────────
+  - canonical_name: "TSH"
+    default_unit: "uIU/mL"
+    plausible_min: 0.01
+    plausible_max: 100.0
+    aliases:
+      - "tsh"
+      - "thyroid stimulating hormone"
+      - "thyrotropin"
+      - "thyroid-stimulating hormone"
+      - "tsh thyroid"
+      - "tsh (thyroid stimulating hormone)"
+      - "s.tsh"
+
+  - canonical_name: "Free T4"
+    default_unit: "ng/dL"
+    plausible_min: 0.1
+    plausible_max: 10.0
+    aliases:
+      - "free t4"
+      - "ft4"
+      - "thyroxine"
+      - "t4 free"
+      - "free thyroxine"
+      - "f.t4"
+      - "t4"
+
+  - canonical_name: "Free T3"
+    default_unit: "pg/mL"
+    plausible_min: 0.5
+    plausible_max: 20.0
+    aliases:
+      - "free t3"
+      - "ft3"
+      - "triiodothyronine"
+      - "t3 free"
+      - "free triiodothyronine"
+      - "f.t3"
+      - "t3"
+
+  - canonical_name: "Anti-TPO"
+    default_unit: "IU/mL"
+    plausible_min: 0.0
+    plausible_max: 2000.0
+    aliases:
+      - "anti-tpo"
+      - "anti tpo"
+      - "tpo antibodies"
+      - "anti-tpo antibodies"
+      - "thyroid peroxidase antibodies"
+      - "antitpo"
+      - "tpo ab"
+      - "anti thyroid peroxidase"
+
+  # ── Cardiac ───────────────────────────────────────────────────────────────
+  - canonical_name: "Troponin I"
+    default_unit: "ng/mL"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    aliases:
+      - "troponin i"
+      - "troponin"
+      - "cardiac troponin i"
+      - "trop i"
+      - "hs troponin"
+      - "troponin-i"
+      - "high sensitivity troponin"
+
+  - canonical_name: "CK-MB"
+    default_unit: "U/L"
+    plausible_min: 0.0
+    plausible_max: 500.0
+    aliases:
+      - "ck-mb"
+      - "ckmb"
+      - "creatine kinase mb"
+      - "creatine phosphokinase mb"
+      - "ck mb"
+
+  - canonical_name: "BNP"
+    default_unit: "pg/mL"
+    plausible_min: 0.0
+    plausible_max: 10000.0
+    aliases:
+      - "bnp"
+      - "brain natriuretic peptide"
+      - "b-type natriuretic peptide"
+      - "nt-probnp"
+      - "ntprobnp"
+      - "pro-bnp"
+
+  - canonical_name: "LDH"
+    default_unit: "U/L"
+    plausible_min: 50.0
+    plausible_max: 5000.0
+    aliases:
+      - "ldh"
+      - "lactate dehydrogenase"
+      - "lactic acid dehydrogenase"
+      - "lactic dehydrogenase"
+
+  # ── Inflammation / Infection ───────────────────────────────────────────────
+  - canonical_name: "CRP"
+    default_unit: "mg/L"
+    plausible_min: 0.0
+    plausible_max: 500.0
+    aliases:
+      - "crp"
+      - "c-reactive protein"
+      - "c reactive protein"
+      - "crp level"
+      - "s.crp"
+
+  - canonical_name: "hs-CRP"
+    default_unit: "mg/L"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    aliases:
+      - "hs-crp"
+      - "hs crp"
+      - "high sensitivity crp"
+      - "high-sensitivity c-reactive protein"
+      - "hsCRP"
+      - "cardiac crp"
+
+  - canonical_name: "Procalcitonin"
+    default_unit: "ng/mL"
+    plausible_min: 0.0
+    plausible_max: 1000.0
+    aliases:
+      - "procalcitonin"
+      - "pct"
+      - "pro-calcitonin"
+      - "procalcitonin (pct)"
+      - "serum procalcitonin"
+
+  # ── Pancreatic ────────────────────────────────────────────────────────────
+  - canonical_name: "Amylase"
+    default_unit: "U/L"
+    plausible_min: 0.0
+    plausible_max: 5000.0
+    aliases:
+      - "amylase"
+      - "serum amylase"
+      - "s amylase"
+      - "amylase level"
+      - "total amylase"
+
+  - canonical_name: "Lipase"
+    default_unit: "U/L"
+    plausible_min: 0.0
+    plausible_max: 10000.0
+    aliases:
+      - "lipase"
+      - "serum lipase"
+      - "s lipase"
+      - "lipase level"
+      - "pancreatic lipase"
+
+  # ── Coagulation ───────────────────────────────────────────────────────────
+  - canonical_name: "PT"
+    default_unit: "seconds"
+    plausible_min: 5.0
+    plausible_max: 100.0
+    aliases:
+      - "pt"
+      - "prothrombin time"
+      - "protime"
+      - "pro time"
+      - "pt/inr"
+
+  - canonical_name: "INR"
+    default_unit: ""
+    plausible_min: 0.5
+    plausible_max: 10.0
+    aliases:
+      - "inr"
+      - "international normalized ratio"
+      - "pt inr"
+      - "inr value"
+
+  - canonical_name: "D-Dimer"
+    default_unit: "ug/mL FEU"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    aliases:
+      - "d-dimer"
+      - "d dimer"
+      - "ddimer"
+      - "fibrin degradation product"
+      - "fdp d-dimer"
+      - "d-dimer feu"
+
+  # ── Hormones / Adrenal ────────────────────────────────────────────────────
+  - canonical_name: "Cortisol"
+    default_unit: "ug/dL"
+    plausible_min: 1.0
+    plausible_max: 100.0
+    aliases:
+      - "cortisol"
+      - "serum cortisol"
+      - "morning cortisol"
+      - "plasma cortisol"
+      - "cortisol level"
+      - "s.cortisol"
+
+  - canonical_name: "Testosterone"
+    default_unit: "ng/dL"
+    plausible_min: 1.0
+    plausible_max: 2000.0
+    aliases:
+      - "testosterone"
+      - "total testosterone"
+      - "serum testosterone"
+      - "testosterone total"
+      - "t testosterone"
+
+  - canonical_name: "PSA"
+    default_unit: "ng/mL"
+    plausible_min: 0.0
+    plausible_max: 500.0
+    aliases:
+      - "psa"
+      - "prostate specific antigen"
+      - "prostate-specific antigen"
+      - "total psa"
+      - "s.psa"
+
+  # ── Vitamins ──────────────────────────────────────────────────────────────
+  - canonical_name: "Vitamin D"
+    default_unit: "ng/mL"
+    plausible_min: 1.0
+    plausible_max: 200.0
+    aliases:
+      - "vitamin d"
+      - "vit d"
+      - "25-oh vitamin d"
+      - "25-hydroxyvitamin d"
+      - "25 oh d"
+      - "vitamin d 25-oh"
+      - "vitamin d 25 oh"
+      - "vitamin d (25-oh)"
+      - "cholecalciferol"
+      - "25(oh)d"
+
+  - canonical_name: "Vitamin B12"
+    default_unit: "pg/mL"
+    plausible_min: 50.0
+    plausible_max: 5000.0
+    aliases:
+      - "vitamin b12"
+      - "vit b12"
+      - "b12"
+      - "cobalamin"
+      - "cyanocobalamin"
+      - "vitamin b 12"
+      - "serum b12"
+
+  # ── Bone / Electrolytes ───────────────────────────────────────────────────
+  - canonical_name: "Calcium"
+    default_unit: "mg/dL"
+    plausible_min: 4.0
+    plausible_max: 18.0
+    aliases:
+      - "calcium"
+      - "serum calcium"
+      - "ca"
+      - "calcium total"
+      - "total calcium"
+      - "ca2+"
+
+  - canonical_name: "Phosphorus"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 15.0
+    aliases:
+      - "phosphorus"
+      - "phosphate"
+      - "serum phosphorus"
+      - "inorganic phosphate"
+      - "phos"
+      - "po4"
+
+  - canonical_name: "Sodium"
+    default_unit: "mEq/L"
+    plausible_min: 100.0
+    plausible_max: 175.0
+    aliases:
+      - "sodium"
+      - "serum sodium"
+      - "na"
+      - "na+"
+      - "serum na"
+      - "s.sodium"
+
+  - canonical_name: "Potassium"
+    default_unit: "mEq/L"
+    plausible_min: 1.5
+    plausible_max: 10.0
+    aliases:
+      - "potassium"
+      - "serum potassium"
+      - "k"
+      - "k+"
+      - "serum k"
+      - "s.potassium"

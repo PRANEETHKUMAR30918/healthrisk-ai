@@ -1,0 +1,45 @@
+rules:
+  - id: "RULE_HB_RBC"
+    biomarker_a: "Hemoglobin"
+    biomarker_b: "RBC"
+    relationship: "hb_rbc_check"
+    tolerance_pct: 20.0
+    weight: 1.0
+    enabled: true
+    explanation_template: "Hemoglobin and RBC count are physiological partners in oxygen transport. A marked disparity (e.g. low RBC count with normal/high hemoglobin) may represent an extraction artifact, hemoconcentration, or requires clinical review."
+
+  - id: "RULE_RBC_MCV"
+    biomarker_a: "RBC"
+    biomarker_b: "MCV"
+    relationship: "rbc_mcv_check"
+    tolerance_pct: 20.0
+    weight: 1.0
+    enabled: true
+    explanation_template: "RBC count and mean corpuscular volume (MCV) collectively relate to cellular volume. An aberrant combination warrants verification against primary clinical findings."
+
+  - id: "RULE_GLUCOSE_HBA1C"
+    biomarker_a: "Fasting Blood Glucose"
+    biomarker_b: "HbA1c"
+    relationship: "glucose_hba1c_check"
+    tolerance_pct: 25.0
+    weight: 1.2
+    enabled: true
+    explanation_template: "Fasting blood glucose reflects acute glycemic control while HbA1c measures 2-3 month mean glucose. Discordance might indicate recent acute fluctuation, hemoglobin variant, or extraction error."
+
+  - id: "RULE_HB_HEMATOCRIT"
+    biomarker_a: "Hemoglobin"
+    biomarker_b: "Hematocrit"
+    relationship: "hb_hct_check"
+    tolerance_pct: 20.0
+    weight: 1.0
+    enabled: true
+    explanation_template: "Rule of three: Hematocrit (%) is approximately 3 times Hemoglobin (g/dL). Severe deviation suggests possible laboratory measurement artifact or analytical discrepancy."
+
+  - id: "RULE_LDL_CHOLESTEROL"
+    biomarker_a: "Total Cholesterol"
+    biomarker_b: "LDL"
+    relationship: "tc_ldl_check"
+    tolerance_pct: 15.0
+    weight: 0.8
+    enabled: true
+    explanation_template: "LDL is a primary sub-fraction of total cholesterol. Observed LDL should not exceed total cholesterol value."

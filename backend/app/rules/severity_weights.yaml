@@ -1,0 +1,31 @@
+risk_tiers:
+  low:
+    threshold_max: 0.20
+    label: "Low risk indicator"
+    color: "green"
+    description: "Parameters reflect low deviation from standard baseline patterns."
+  mild:
+    threshold_max: 0.40
+    label: "Mild risk indicator — monitoring recommended"
+    color: "yellow"
+    description: "Isolated parameters show mild abnormal patterns. Consider routine clinical monitoring."
+  moderate:
+    threshold_max: 0.65
+    label: "Moderate risk indicator — consider consultation"
+    color: "orange"
+    description: "Multiple interrelated parameters show deviations. Consider consulting a healthcare professional."
+  elevated:
+    threshold_max: 1.00
+    label: "Elevated risk indicator — clinical review recommended"
+    color: "red"
+    description: "Consistent multi-test abnormal pattern detected. Prompt clinical review is recommended."
+
+baseline_thresholds:
+  minor_z: 1.0
+  moderate_z: 2.0
+  significant_z: 3.0
+
+consistency_weights:
+  w1_consistency: 0.4
+  w2_confidence: 0.4
+  w3_stability: 0.2

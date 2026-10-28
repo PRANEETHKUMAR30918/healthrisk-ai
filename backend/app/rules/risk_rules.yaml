@@ -1,0 +1,296 @@
+risk_categories:
+  - id: "METABOLIC_RISK"
+    display_name: "Metabolic Risk Indicator"
+    severity_weight: 1.5
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Fasting Blood Glucose"
+        weight: 0.35
+      - biomarker: "HbA1c"
+        weight: 0.40
+      - biomarker: "Postprandial Blood Glucose"
+        weight: 0.25
+
+  - id: "ANEMIA_RISK"
+    display_name: "Hematologic / Anemia Risk Indicator"
+    severity_weight: 1.2
+    alpha_threshold: 0.40
+    enabled: true
+    features:
+      - biomarker: "Hemoglobin"
+        weight: 0.40
+      - biomarker: "RBC"
+        weight: 0.25
+      - biomarker: "MCV"
+        weight: 0.20
+      - biomarker: "Hematocrit"
+        weight: 0.15
+
+  - id: "LIPID_RISK"
+    display_name: "Cardiovascular Lipid Risk Indicator"
+    severity_weight: 1.3
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Total Cholesterol"
+        weight: 0.25
+      - biomarker: "LDL"
+        weight: 0.35
+      - biomarker: "Triglycerides"
+        weight: 0.25
+      - biomarker: "HDL"
+        weight: 0.15
+
+  - id: "RENAL_RISK"
+    display_name: "Renal Function Risk Indicator"
+    severity_weight: 1.4
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Serum Creatinine"
+        weight: 0.40
+      - biomarker: "BUN"
+        weight: 0.30
+      - biomarker: "eGFR"
+        weight: 0.30
+
+  # ── 20 NEW DISEASE RISK CATEGORIES ──────────────────────────────────────────
+
+  - id: "LIVER_DISEASE_RISK"
+    display_name: "Liver Disease / Hepatitis Risk"
+    severity_weight: 1.4
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "ALT"
+        weight: 0.30
+      - biomarker: "AST"
+        weight: 0.25
+      - biomarker: "Total Bilirubin"
+        weight: 0.20
+      - biomarker: "Albumin"
+        weight: 0.15
+      - biomarker: "GGT"
+        weight: 0.10
+
+  - id: "HYPOTHYROID_RISK"
+    display_name: "Hypothyroidism Risk"
+    severity_weight: 1.2
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "TSH"
+        weight: 0.50
+      - biomarker: "Free T4"
+        weight: 0.30
+      - biomarker: "Free T3"
+        weight: 0.20
+
+  - id: "HYPERTHYROID_RISK"
+    display_name: "Hyperthyroidism Risk"
+    severity_weight: 1.2
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "TSH"
+        weight: 0.50
+      - biomarker: "Free T4"
+        weight: 0.30
+      - biomarker: "Free T3"
+        weight: 0.20
+
+  - id: "AUTOIMMUNE_THYROID_RISK"
+    display_name: "Autoimmune Thyroid Disease Risk (Hashimoto's)"
+    severity_weight: 1.1
+    alpha_threshold: 0.40
+    enabled: true
+    features:
+      - biomarker: "Anti-TPO"
+        weight: 0.60
+      - biomarker: "TSH"
+        weight: 0.40
+
+  - id: "CARDIAC_INJURY_RISK"
+    display_name: "Acute Cardiac Injury / Myocardial Infarction Risk"
+    severity_weight: 1.8
+    alpha_threshold: 0.40
+    enabled: true
+    features:
+      - biomarker: "Troponin I"
+        weight: 0.50
+      - biomarker: "CK-MB"
+        weight: 0.30
+      - biomarker: "LDH"
+        weight: 0.20
+
+  - id: "HEART_FAILURE_RISK"
+    display_name: "Congestive Heart Failure Risk"
+    severity_weight: 1.6
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "BNP"
+        weight: 0.60
+      - biomarker: "Troponin I"
+        weight: 0.25
+      - biomarker: "LDH"
+        weight: 0.15
+
+  - id: "SYSTEMIC_INFLAMMATION_RISK"
+    display_name: "Systemic Inflammation / Autoimmune Risk"
+    severity_weight: 1.3
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "CRP"
+        weight: 0.35
+      - biomarker: "hs-CRP"
+        weight: 0.35
+      - biomarker: "ESR"
+        weight: 0.30
+
+  - id: "SEPSIS_INFECTION_RISK"
+    display_name: "Sepsis / Severe Bacterial Infection Risk"
+    severity_weight: 1.7
+    alpha_threshold: 0.40
+    enabled: true
+    features:
+      - biomarker: "Procalcitonin"
+        weight: 0.50
+      - biomarker: "CRP"
+        weight: 0.30
+      - biomarker: "WBC"
+        weight: 0.20
+
+  - id: "GOUT_RISK"
+    display_name: "Gout / Hyperuricemia Risk"
+    severity_weight: 1.1
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Uric Acid"
+        weight: 1.00
+
+  - id: "PANCREATITIS_RISK"
+    display_name: "Pancreatitis Risk"
+    severity_weight: 1.5
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Amylase"
+        weight: 0.45
+      - biomarker: "Lipase"
+        weight: 0.55
+
+  - id: "COAGULATION_DISORDER_RISK"
+    display_name: "Coagulation Disorder / Thrombosis Risk"
+    severity_weight: 1.5
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "PT"
+        weight: 0.30
+      - biomarker: "INR"
+        weight: 0.40
+      - biomarker: "D-Dimer"
+        weight: 0.30
+
+  - id: "VITAMIN_D_DEFICIENCY_RISK"
+    display_name: "Vitamin D Deficiency Risk"
+    severity_weight: 1.0
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Vitamin D"
+        weight: 1.00
+
+  - id: "VITAMIN_B12_DEFICIENCY_RISK"
+    display_name: "Vitamin B12 Deficiency / Megaloblastic Anemia Risk"
+    severity_weight: 1.1
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Vitamin B12"
+        weight: 0.70
+      - biomarker: "MCV"
+        weight: 0.30
+
+  - id: "IRON_DEFICIENCY_ANEMIA_RISK"
+    display_name: "Iron Deficiency Anemia Risk"
+    severity_weight: 1.2
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Ferritin"
+        weight: 0.35
+      - biomarker: "Serum Iron"
+        weight: 0.25
+      - biomarker: "TIBC"
+        weight: 0.20
+      - biomarker: "Transferrin Saturation"
+        weight: 0.20
+
+  - id: "ELECTROLYTE_IMBALANCE_RISK"
+    display_name: "Electrolyte Imbalance Risk (Hyponatremia / Hypokalemia)"
+    severity_weight: 1.3
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Sodium"
+        weight: 0.40
+      - biomarker: "Potassium"
+        weight: 0.40
+      - biomarker: "Magnesium"
+        weight: 0.20
+
+  - id: "ADRENAL_DYSFUNCTION_RISK"
+    display_name: "Adrenal Insufficiency / Cushing's Syndrome Risk"
+    severity_weight: 1.2
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Cortisol"
+        weight: 1.00
+
+  - id: "HYPOGONADISM_RISK"
+    display_name: "Hypogonadism / Low Testosterone Risk"
+    severity_weight: 1.0
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Testosterone"
+        weight: 1.00
+
+  - id: "PROSTATE_RISK"
+    display_name: "Prostate Cancer / BPH Risk"
+    severity_weight: 1.4
+    alpha_threshold: 0.40
+    enabled: true
+    features:
+      - biomarker: "PSA"
+        weight: 1.00
+
+  - id: "BONE_DISEASE_RISK"
+    display_name: "Metabolic Bone Disease / Osteoporosis Risk"
+    severity_weight: 1.1
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "Alkaline Phosphatase"
+        weight: 0.35
+      - biomarker: "Calcium"
+        weight: 0.40
+      - biomarker: "Phosphorus"
+        weight: 0.25
+
+  - id: "TISSUE_DAMAGE_HEMOLYSIS_RISK"
+    display_name: "Tissue Damage / Hemolysis Risk"
+    severity_weight: 1.3
+    alpha_threshold: 0.45
+    enabled: true
+    features:
+      - biomarker: "LDH"
+        weight: 0.60
+      - biomarker: "Total Bilirubin"
+        weight: 0.40

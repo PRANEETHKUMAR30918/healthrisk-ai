@@ -1,0 +1,86 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: healthrisk_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-healthrisk}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-healthrisk_secret}
+      POSTGRES_DB: ${POSTGRES_DB:-healthrisk_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - healthrisk_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-healthrisk} -d ${POSTGRES_DB:-healthrisk_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: healthrisk_backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-healthrisk}:${POSTGRES_PASSWORD:-healthrisk_secret}@postgres:5432/${POSTGRES_DB:-healthrisk_db}
+      SECRET_KEY: ${SECRET_KEY:-dev-secret-key-change-in-production-32chars}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://frontend:80}
+      DEBUG: ${DEBUG:-false}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      UPLOAD_DIR: /app/uploads
+      MIN_HISTORY_COUNT: ${MIN_HISTORY_COUNT:-3}
+      RULES_DIR: /app/app/rules
+    volumes:
+      - report_uploads:/app/uploads
+    ports:
+      - "8000:8000"
+    networks:
+      - healthrisk_net
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 90s
+    command: >-
+      sh -c "alembic upgrade head &&
+             python data/synthetic/seed_patients.py &&
+             uvicorn app.main:app --host 0.0.0.0 --port 8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000}
+    container_name: healthrisk_frontend
+    ports:
+      - "3000:80"
+    networks:
+      - healthrisk_net
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  postgres_data:
+    driver: local
+  report_uploads:
+    driver: local
+
+networks:
+  healthrisk_net:
+    driver: bridge

@@ -1,0 +1,54 @@
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+venv/
+env/
+.venv/
+
+# NEVER commit these
+.env
+*.env
+!.env.example
+
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+node_modules/
+frontend/dist/
+
+# Uploads — never commit patient data
+backend/uploads/
+uploads/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+!data/synthetic/**
+
+.coverage
+htmlcov/
+.pytest_cache/
+
+*.log
+logs/
+
+backend/alembic/versions/__pycache__/
+
+# Database files — never push patient data
+*.db
+*.sqlite
+*.sqlite3
+
+# Internal scratch / planning files
+scratch/
+task.md
+implementation_plan.md
+walkthrough.md

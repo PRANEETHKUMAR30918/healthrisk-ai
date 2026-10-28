@@ -1,0 +1,610 @@
+biomarkers:
+  # CBC
+  - canonical_name: "Hemoglobin"
+    display_name: "Hemoglobin (Hb)"
+    panel: "CBC"
+    default_unit: "g/dL"
+    plausible_min: 3.0
+    plausible_max: 25.0
+    ref_low_male: 13.5
+    ref_high_male: 17.5
+    ref_low_female: 12.0
+    ref_high_female: 15.5
+
+  - canonical_name: "RBC"
+    display_name: "Red Blood Cell Count (RBC)"
+    panel: "CBC"
+    default_unit: "10^6/uL"
+    plausible_min: 1.0
+    plausible_max: 10.0
+    ref_low_male: 4.5
+    ref_high_male: 5.9
+    ref_low_female: 4.1
+    ref_high_female: 5.1
+
+  - canonical_name: "WBC"
+    display_name: "White Blood Cell Count (WBC)"
+    panel: "CBC"
+    default_unit: "10^3/uL"
+    plausible_min: 0.5
+    plausible_max: 100.0
+    ref_low_male: 4.5
+    ref_high_male: 11.0
+    ref_low_female: 4.5
+    ref_high_female: 11.0
+
+  - canonical_name: "Platelets"
+    display_name: "Platelet Count"
+    panel: "CBC"
+    default_unit: "10^3/uL"
+    plausible_min: 10.0
+    plausible_max: 1500.0
+    ref_low_male: 150.0
+    ref_high_male: 450.0
+    ref_low_female: 150.0
+    ref_high_female: 450.0
+
+  - canonical_name: "MCV"
+    display_name: "Mean Corpuscular Volume (MCV)"
+    panel: "CBC"
+    default_unit: "fL"
+    plausible_min: 40.0
+    plausible_max: 150.0
+    ref_low_male: 80.0
+    ref_high_male: 100.0
+    ref_low_female: 80.0
+    ref_high_female: 100.0
+
+  - canonical_name: "Hematocrit"
+    display_name: "Hematocrit (Hct)"
+    panel: "CBC"
+    default_unit: "%"
+    plausible_min: 10.0
+    plausible_max: 75.0
+    ref_low_male: 41.0
+    ref_high_male: 50.0
+    ref_low_female: 36.0
+    ref_high_female: 44.0
+
+  # METABOLIC / GLYCEMIC
+  - canonical_name: "Fasting Blood Glucose"
+    display_name: "Fasting Blood Glucose (FBG)"
+    panel: "METABOLIC"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 800.0
+    ref_low_male: 70.0
+    ref_high_male: 99.0
+    ref_low_female: 70.0
+    ref_high_female: 99.0
+
+  - canonical_name: "HbA1c"
+    display_name: "Glycated Hemoglobin (HbA1c)"
+    panel: "METABOLIC"
+    default_unit: "%"
+    plausible_min: 3.0
+    plausible_max: 20.0
+    ref_low_male: 4.0
+    ref_high_male: 5.6
+    ref_low_female: 4.0
+    ref_high_female: 5.6
+
+  - canonical_name: "Postprandial Blood Glucose"
+    display_name: "Postprandial Blood Glucose (PPBG)"
+    panel: "METABOLIC"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 800.0
+    ref_low_male: 70.0
+    ref_high_male: 140.0
+    ref_low_female: 70.0
+    ref_high_female: 140.0
+
+  # LIPID
+  - canonical_name: "Total Cholesterol"
+    display_name: "Total Cholesterol"
+    panel: "LIPID"
+    default_unit: "mg/dL"
+    plausible_min: 50.0
+    plausible_max: 700.0
+    ref_low_male: 125.0
+    ref_high_male: 200.0
+    ref_low_female: 125.0
+    ref_high_female: 200.0
+
+  - canonical_name: "HDL"
+    display_name: "High-Density Lipoprotein (HDL)"
+    panel: "LIPID"
+    default_unit: "mg/dL"
+    plausible_min: 10.0
+    plausible_max: 150.0
+    ref_low_male: 40.0
+    ref_high_male: 999.0
+    ref_low_female: 50.0
+    ref_high_female: 999.0
+
+  - canonical_name: "LDL"
+    display_name: "Low-Density Lipoprotein (LDL)"
+    panel: "LIPID"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 400.0
+    ref_low_male: 0.0
+    ref_high_male: 100.0
+    ref_low_female: 0.0
+    ref_high_female: 100.0
+
+  - canonical_name: "Triglycerides"
+    display_name: "Triglycerides"
+    panel: "LIPID"
+    default_unit: "mg/dL"
+    plausible_min: 20.0
+    plausible_max: 2000.0
+    ref_low_male: 0.0
+    ref_high_male: 150.0
+    ref_low_female: 0.0
+    ref_high_female: 150.0
+
+  # IRON / RENAL
+  - canonical_name: "Ferritin"
+    display_name: "Serum Ferritin"
+    panel: "IRON_RENAL"
+    default_unit: "ng/mL"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    ref_low_male: 24.0
+    ref_high_male: 336.0
+    ref_low_female: 11.0
+    ref_high_female: 307.0
+
+  - canonical_name: "Serum Creatinine"
+    display_name: "Serum Creatinine"
+    panel: "IRON_RENAL"
+    default_unit: "mg/dL"
+    plausible_min: 0.1
+    plausible_max: 20.0
+    ref_low_male: 0.74
+    ref_high_male: 1.35
+    ref_low_female: 0.59
+    ref_high_female: 1.04
+
+  - canonical_name: "BUN"
+    display_name: "Blood Urea Nitrogen (BUN)"
+    panel: "IRON_RENAL"
+    default_unit: "mg/dL"
+    plausible_min: 2.0
+    plausible_max: 150.0
+    ref_low_male: 7.0
+    ref_high_male: 20.0
+    ref_low_female: 7.0
+    ref_high_female: 20.0
+
+  - canonical_name: "eGFR"
+    display_name: "Estimated GFR (eGFR)"
+    panel: "IRON_RENAL"
+    default_unit: "mL/min/1.73m2"
+    plausible_min: 5.0
+    plausible_max: 180.0
+    ref_low_male: 60.0
+    ref_high_male: 999.0
+    ref_low_female: 60.0
+    ref_high_female: 999.0
+
+  # LIVER FUNCTION
+  - canonical_name: "ALT"
+    display_name: "Alanine Aminotransferase (ALT/SGPT)"
+    panel: "LIVER"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    ref_low_male: 7.0
+    ref_high_male: 56.0
+    ref_low_female: 7.0
+    ref_high_female: 45.0
+
+  - canonical_name: "AST"
+    display_name: "Aspartate Aminotransferase (AST/SGOT)"
+    panel: "LIVER"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 5000.0
+    ref_low_male: 10.0
+    ref_high_male: 40.0
+    ref_low_female: 10.0
+    ref_high_female: 40.0
+
+  - canonical_name: "Total Bilirubin"
+    display_name: "Total Bilirubin"
+    panel: "LIVER"
+    default_unit: "mg/dL"
+    plausible_min: 0.0
+    plausible_max: 50.0
+    ref_low_male: 0.1
+    ref_high_male: 1.2
+    ref_low_female: 0.1
+    ref_high_female: 1.2
+
+  - canonical_name: "Albumin"
+    display_name: "Serum Albumin"
+    panel: "LIVER"
+    default_unit: "g/dL"
+    plausible_min: 1.0
+    plausible_max: 8.0
+    ref_low_male: 3.5
+    ref_high_male: 5.0
+    ref_low_female: 3.5
+    ref_high_female: 5.0
+
+  - canonical_name: "GGT"
+    display_name: "Gamma-Glutamyl Transferase (GGT)"
+    panel: "LIVER"
+    default_unit: "U/L"
+    plausible_min: 1.0
+    plausible_max: 3000.0
+    ref_low_male: 9.0
+    ref_high_male: 48.0
+    ref_low_female: 9.0
+    ref_high_female: 32.0
+
+  # THYROID
+  - canonical_name: "TSH"
+    display_name: "Thyroid Stimulating Hormone (TSH)"
+    panel: "THYROID"
+    default_unit: "uIU/mL"
+    plausible_min: 0.01
+    plausible_max: 100.0
+    ref_low_male: 0.4
+    ref_high_male: 4.0
+    ref_low_female: 0.4
+    ref_high_female: 4.0
+
+  - canonical_name: "Free T4"
+    display_name: "Free Thyroxine (Free T4)"
+    panel: "THYROID"
+    default_unit: "ng/dL"
+    plausible_min: 0.1
+    plausible_max: 10.0
+    ref_low_male: 0.8
+    ref_high_male: 1.8
+    ref_low_female: 0.8
+    ref_high_female: 1.8
+
+  - canonical_name: "Free T3"
+    display_name: "Free Triiodothyronine (Free T3)"
+    panel: "THYROID"
+    default_unit: "pg/mL"
+    plausible_min: 0.5
+    plausible_max: 20.0
+    ref_low_male: 2.3
+    ref_high_male: 4.2
+    ref_low_female: 2.3
+    ref_high_female: 4.2
+
+  - canonical_name: "Anti-TPO"
+    display_name: "Anti-Thyroid Peroxidase Antibodies (Anti-TPO)"
+    panel: "THYROID"
+    default_unit: "IU/mL"
+    plausible_min: 0.0
+    plausible_max: 2000.0
+    ref_low_male: 0.0
+    ref_high_male: 34.0
+    ref_low_female: 0.0
+    ref_high_female: 34.0
+
+  # CARDIAC BIOMARKERS
+  - canonical_name: "Troponin I"
+    display_name: "Troponin I (Cardiac)"
+    panel: "CARDIAC"
+    default_unit: "ng/mL"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    ref_low_male: 0.0
+    ref_high_male: 0.04
+    ref_low_female: 0.0
+    ref_high_female: 0.04
+
+  - canonical_name: "CK-MB"
+    display_name: "Creatine Kinase-MB (CK-MB)"
+    panel: "CARDIAC"
+    default_unit: "U/L"
+    plausible_min: 0.0
+    plausible_max: 500.0
+    ref_low_male: 0.0
+    ref_high_male: 25.0
+    ref_low_female: 0.0
+    ref_high_female: 25.0
+
+  - canonical_name: "BNP"
+    display_name: "Brain Natriuretic Peptide (BNP)"
+    panel: "CARDIAC"
+    default_unit: "pg/mL"
+    plausible_min: 0.0
+    plausible_max: 10000.0
+    ref_low_male: 0.0
+    ref_high_male: 100.0
+    ref_low_female: 0.0
+    ref_high_female: 100.0
+
+  - canonical_name: "LDH"
+    display_name: "Lactate Dehydrogenase (LDH)"
+    panel: "CARDIAC"
+    default_unit: "U/L"
+    plausible_min: 50.0
+    plausible_max: 5000.0
+    ref_low_male: 140.0
+    ref_high_male: 280.0
+    ref_low_female: 140.0
+    ref_high_female: 280.0
+
+  # INFLAMMATION / INFECTION
+  - canonical_name: "CRP"
+    display_name: "C-Reactive Protein (CRP)"
+    panel: "INFLAMMATION"
+    default_unit: "mg/L"
+    plausible_min: 0.0
+    plausible_max: 500.0
+    ref_low_male: 0.0
+    ref_high_male: 5.0
+    ref_low_female: 0.0
+    ref_high_female: 5.0
+
+  - canonical_name: "hs-CRP"
+    display_name: "High-Sensitivity CRP (hs-CRP)"
+    panel: "INFLAMMATION"
+    default_unit: "mg/L"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    ref_low_male: 0.0
+    ref_high_male: 1.0
+    ref_low_female: 0.0
+    ref_high_female: 1.0
+
+  - canonical_name: "ESR"
+    display_name: "Erythrocyte Sedimentation Rate (ESR)"
+    panel: "INFLAMMATION"
+    default_unit: "mm/hr"
+    plausible_min: 0.0
+    plausible_max: 200.0
+    ref_low_male: 0.0
+    ref_high_male: 15.0
+    ref_low_female: 0.0
+    ref_high_female: 20.0
+
+  - canonical_name: "Procalcitonin"
+    display_name: "Procalcitonin (PCT)"
+    panel: "INFLAMMATION"
+    default_unit: "ng/mL"
+    plausible_min: 0.0
+    plausible_max: 1000.0
+    ref_low_male: 0.0
+    ref_high_male: 0.5
+    ref_low_female: 0.0
+    ref_high_female: 0.5
+
+  # GOUT / ARTHRITIS
+  - canonical_name: "Uric Acid"
+    display_name: "Serum Uric Acid"
+    panel: "GOUT"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 20.0
+    ref_low_male: 3.5
+    ref_high_male: 7.2
+    ref_low_female: 2.6
+    ref_high_female: 6.0
+
+  # PANCREATIC
+  - canonical_name: "Amylase"
+    display_name: "Serum Amylase"
+    panel: "PANCREATIC"
+    default_unit: "U/L"
+    plausible_min: 0.0
+    plausible_max: 5000.0
+    ref_low_male: 30.0
+    ref_high_male: 110.0
+    ref_low_female: 30.0
+    ref_high_female: 110.0
+
+  - canonical_name: "Lipase"
+    display_name: "Serum Lipase"
+    panel: "PANCREATIC"
+    default_unit: "U/L"
+    plausible_min: 0.0
+    plausible_max: 10000.0
+    ref_low_male: 13.0
+    ref_high_male: 60.0
+    ref_low_female: 13.0
+    ref_high_female: 60.0
+
+  # COAGULATION
+  - canonical_name: "PT"
+    display_name: "Prothrombin Time (PT)"
+    panel: "COAGULATION"
+    default_unit: "seconds"
+    plausible_min: 5.0
+    plausible_max: 100.0
+    ref_low_male: 11.0
+    ref_high_male: 13.5
+    ref_low_female: 11.0
+    ref_high_female: 13.5
+
+  - canonical_name: "INR"
+    display_name: "International Normalized Ratio (INR)"
+    panel: "COAGULATION"
+    default_unit: ""
+    plausible_min: 0.5
+    plausible_max: 10.0
+    ref_low_male: 0.8
+    ref_high_male: 1.2
+    ref_low_female: 0.8
+    ref_high_female: 1.2
+
+  - canonical_name: "D-Dimer"
+    display_name: "D-Dimer"
+    panel: "COAGULATION"
+    default_unit: "ug/mL FEU"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    ref_low_male: 0.0
+    ref_high_male: 0.5
+    ref_low_female: 0.0
+    ref_high_female: 0.5
+
+  # HORMONES / ADRENAL
+  - canonical_name: "Cortisol"
+    display_name: "Serum Cortisol (Morning)"
+    panel: "HORMONAL"
+    default_unit: "ug/dL"
+    plausible_min: 1.0
+    plausible_max: 100.0
+    ref_low_male: 6.2
+    ref_high_male: 19.4
+    ref_low_female: 6.2
+    ref_high_female: 19.4
+
+  - canonical_name: "Testosterone"
+    display_name: "Total Testosterone"
+    panel: "HORMONAL"
+    default_unit: "ng/dL"
+    plausible_min: 1.0
+    plausible_max: 2000.0
+    ref_low_male: 300.0
+    ref_high_male: 1000.0
+    ref_low_female: 15.0
+    ref_high_female: 70.0
+
+  - canonical_name: "PSA"
+    display_name: "Prostate-Specific Antigen (PSA)"
+    panel: "PROSTATE"
+    default_unit: "ng/mL"
+    plausible_min: 0.0
+    plausible_max: 500.0
+    ref_low_male: 0.0
+    ref_high_male: 4.0
+    ref_low_female: 0.0
+    ref_high_female: 0.0
+
+  # VITAMINS
+  - canonical_name: "Vitamin D"
+    display_name: "Vitamin D (25-OH)"
+    panel: "VITAMINS"
+    default_unit: "ng/mL"
+    plausible_min: 1.0
+    plausible_max: 200.0
+    ref_low_male: 30.0
+    ref_high_male: 100.0
+    ref_low_female: 30.0
+    ref_high_female: 100.0
+
+  - canonical_name: "Vitamin B12"
+    display_name: "Vitamin B12 (Cobalamin)"
+    panel: "VITAMINS"
+    default_unit: "pg/mL"
+    plausible_min: 50.0
+    plausible_max: 5000.0
+    ref_low_male: 200.0
+    ref_high_male: 900.0
+    ref_low_female: 200.0
+    ref_high_female: 900.0
+
+  # BONE HEALTH
+  - canonical_name: "Alkaline Phosphatase"
+    display_name: "Alkaline Phosphatase (ALP)"
+    panel: "BONE"
+    default_unit: "U/L"
+    plausible_min: 10.0
+    plausible_max: 3000.0
+    ref_low_male: 44.0
+    ref_high_male: 147.0
+    ref_low_female: 44.0
+    ref_high_female: 147.0
+
+  - canonical_name: "Calcium"
+    display_name: "Serum Calcium"
+    panel: "BONE"
+    default_unit: "mg/dL"
+    plausible_min: 4.0
+    plausible_max: 18.0
+    ref_low_male: 8.5
+    ref_high_male: 10.5
+    ref_low_female: 8.5
+    ref_high_female: 10.5
+
+  - canonical_name: "Phosphorus"
+    display_name: "Serum Phosphorus"
+    panel: "BONE"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 15.0
+    ref_low_male: 2.5
+    ref_high_male: 4.5
+    ref_low_female: 2.5
+    ref_high_female: 4.5
+
+  # ELECTROLYTES
+  - canonical_name: "Sodium"
+    display_name: "Serum Sodium (Na)"
+    panel: "ELECTROLYTES"
+    default_unit: "mEq/L"
+    plausible_min: 100.0
+    plausible_max: 175.0
+    ref_low_male: 136.0
+    ref_high_male: 145.0
+    ref_low_female: 136.0
+    ref_high_female: 145.0
+
+  - canonical_name: "Potassium"
+    display_name: "Serum Potassium (K)"
+    panel: "ELECTROLYTES"
+    default_unit: "mEq/L"
+    plausible_min: 1.5
+    plausible_max: 10.0
+    ref_low_male: 3.5
+    ref_high_male: 5.1
+    ref_low_female: 3.5
+    ref_high_female: 5.1
+
+  - canonical_name: "Magnesium"
+    display_name: "Serum Magnesium (Mg)"
+    panel: "ELECTROLYTES"
+    default_unit: "mg/dL"
+    plausible_min: 0.5
+    plausible_max: 6.0
+    ref_low_male: 1.7
+    ref_high_male: 2.3
+    ref_low_female: 1.7
+    ref_high_female: 2.3
+
+  # IRON DEFICIENCY / ANEMIA
+  - canonical_name: "Serum Iron"
+    display_name: "Serum Iron"
+    panel: "IRON_STUDIES"
+    default_unit: "ug/dL"
+    plausible_min: 10.0
+    plausible_max: 300.0
+    ref_low_male: 60.0
+    ref_high_male: 170.0
+    ref_low_female: 37.0
+    ref_high_female: 145.0
+
+  - canonical_name: "TIBC"
+    display_name: "Total Iron Binding Capacity (TIBC)"
+    panel: "IRON_STUDIES"
+    default_unit: "ug/dL"
+    plausible_min: 100.0
+    plausible_max: 600.0
+    ref_low_male: 250.0
+    ref_high_male: 370.0
+    ref_low_female: 250.0
+    ref_high_female: 370.0
+
+  - canonical_name: "Transferrin Saturation"
+    display_name: "Transferrin Saturation"
+    panel: "IRON_STUDIES"
+    default_unit: "%"
+    plausible_min: 0.0
+    plausible_max: 100.0
+    ref_low_male: 20.0
+    ref_high_male: 50.0
+    ref_low_female: 15.0
+    ref_high_female: 50.0
