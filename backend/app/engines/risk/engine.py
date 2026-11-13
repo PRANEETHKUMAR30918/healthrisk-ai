@@ -18,11 +18,22 @@ class MultiTestRiskEngine:
         total_sev_weight = 0.0
         weighted_risk_sum = 0.0
 
+        # Determine which categories have measured biomarker data in this report
+        evaluated_category_ids = {
+            cat.id for cat in self.rule_loader.categories
+            if any(feat.biomarker in biomarker_values for feat in cat.features)
+        }
+
         for cat in self.rule_loader.categories:
             res = self._score_category(cat, biomarker_values, abnormal_flags, deviations)
             cat_results.append(res)
-            total_sev_weight += cat.severity_weight
-            weighted_risk_sum += res.severity_weighted_score
+
+            # If evaluated categories exist, calculate HRI over evaluated/flagged panels
+            # to prevent denominator dilution from un-tested disease panels
+            is_evaluated = (cat.id in evaluated_category_ids) or res.is_flagged
+            if not evaluated_category_ids or is_evaluated:
+                total_sev_weight += cat.severity_weight
+                weighted_risk_sum += res.severity_weighted_score
 
         # Overall Health Risk Index (HRI)
         overall_hri = (weighted_risk_sum / total_sev_weight) if total_sev_weight > 0 else 0.0
