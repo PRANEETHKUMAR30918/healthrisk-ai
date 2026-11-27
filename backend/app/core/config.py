@@ -26,11 +26,23 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = "sqlite+aiosqlite:///./healthrisk.db"
 
+    @field_validator("DATABASE_URL", mode="before")
+    @classmethod
+    def fix_database_url(cls, v: str) -> str:
+        if isinstance(v, str):
+            if v.startswith("postgres://"):
+                return v.replace("postgres://", "postgresql+asyncpg://", 1)
+            if v.startswith("postgresql://") and not v.startswith("postgresql+asyncpg://"):
+                return v.replace("postgresql://", "postgresql+asyncpg://", 1)
+        return v
+
     # CORS
-    CORS_ORIGINS: str = "http://localhost:3000"
+    CORS_ORIGINS: str = "http://localhost:3000,http://localhost:5173"
 
     @property
     def cors_origins_list(self) -> List[str]:
+        if self.CORS_ORIGINS.strip() == "*":
+            return ["*"]
         return [o.strip() for o in self.CORS_ORIGINS.split(",") if o.strip()]
 
     # File upload
